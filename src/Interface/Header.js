@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Main from './Main';
 
 const Header = () => {
     return (
-        <header className='w-full py-4 px-4'>
-            <div className="navbar bg-base-100">
+        <header className='w-full py-4'>
+            <div className="navbar bg-base-100 px-4">
                 <div className="flex-1">
                     <Link to='/' className="text-3xl font-bold">Messages</Link>
                 </div>
@@ -32,11 +33,10 @@ const Header = () => {
                                 <img src="https://api.lorem.space/image/face?hash=33791" alt='personal' />
                             </div>
                         </label>
-                        <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                        <ul tabIndex="0" className="menu menu-compact dropdown-content mt-5 p-2 shadow-2xl bg-base-100 rounded-box w-52">
                             <li>
                                 <Link to='/' className="justify-between">
                                     Profile
-                                    <span className="badge">New</span>
                                 </Link>
                             </li>
                             <li><Link to='/'>Settings</Link></li>
@@ -45,6 +45,7 @@ const Header = () => {
                     </div>
                 </div>
             </div>
+            <Main></Main>
         </header>
     );
 };
